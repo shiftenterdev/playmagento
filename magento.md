@@ -81,3 +81,29 @@ find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws 
 chown -R :www-data .;
 chmod u+x bin/magento;
 ```
+## Create Database
+> Create Database
+```sh
+sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'";
+mysql -uroot -p -e "CREATE DATABASE project_database";
+```
+
+## Install Magento
+> Install Magento Project via cli
+```sh
+$ bin/magento setup:install --base-url=http://magento.test \
+--db-host=localhost \
+--db-name=database \
+--db-user=root \
+--db-password=root \
+--admin-firstname=System \
+--admin-lastname=Admin \
+--admin-email=user@example.com \
+--admin-user=admin \
+--admin-password=admin \
+--backend-frontname=admin \
+--language=en_US \
+--currency=USD \
+--timezone=America/Chicago \
+--use-rewrites=1
+```
