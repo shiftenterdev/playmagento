@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](/_media/laptop.png)
+![logo](/_media/code.png)
 
 # playmagento <small>1.0</small>
 

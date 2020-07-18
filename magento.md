@@ -1,7 +1,7 @@
 ## Nginx virtual host
 
 > Create Virtual Host nginx
-```sh
+```nginx
 upstream fastcgi_backend {
     # use tcp connection
     # server  127.0.0.1:9000;
@@ -75,7 +75,7 @@ composer create-project --repository-url=https://repo.magento.com/ magento/proje
 
 ## Project permission
 > Give Project file specific Permission
-```sh
+```bash
 find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +;
 find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +;
 chown -R :www-data .;
@@ -83,14 +83,14 @@ chmod u+x bin/magento;
 ```
 ## Create Database
 > Create Database
-```sh
+```bash
 sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'";
 mysql -uroot -p -e "CREATE DATABASE project_database";
 ```
 
 ## Install Magento
 > Install Magento Project via cli
-```sh
+```bash
 $ bin/magento setup:install --base-url=http://magento.test \
 --db-host=localhost \
 --db-name=database \
@@ -110,7 +110,7 @@ $ bin/magento setup:install --base-url=http://magento.test \
 
 ## Sample Data
 > Magento get Sample Data
-```sh
+```bash
 $ wget https://github.com/magento/magento2-sample-data/archive/2.3.5.zip -O sampledata.zip
 $ unzip sampledata.zip
 $ php -f <sample-data_clone_dir>/dev/tools/build-sample-data.php -- --ce-source="<path_to_your_magento_instance>"
@@ -121,7 +121,7 @@ $ sudo chmod -R 777 magento2-sample-data-2.3.5/pub
 
 ## Deploy Project
 > Deploy Magento 2 project
-```sh
+```bash
 $ php bin/magento deploy:mode:set production --skip-compilation
 $ php bin/magento setup:static-content:deploy sv_SE -a frontend
 $ php bin/magento setup:static-content:deploy en_US -a adminhtml
@@ -129,16 +129,27 @@ $ php bin/magento setup:static-content:deploy en_US -a adminhtml
 
 ## Magento profiler
 > Magento profiler
-```sh
+```bash
 $_SERVER['MAGE_PROFILER'] = 'html';
 # at beginning of index.php page
 ```
 
 ## Cron list
 > Get magento cron job list
-```sh
+```bash
 $ wget https://files.magerun.net/n98-magerun2.phar
 $ chmod +x ./n98-magerun2.phar; 
 $ ./n98-magerun2.phar --version
 $ ./n98-magerun2.phar sys:cron:list
+```
+
+## Create admin
+> Create admin from cli
+```bash
+php bin/magento admin:user:create \
+--admin-user="admin" \
+--admin-password="123123q" \
+--admin-email="admin@example.com" \
+--admin-firstname="Admin" \
+--admin-lastname="Admin"
 ```
