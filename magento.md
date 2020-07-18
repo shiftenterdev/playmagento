@@ -153,3 +153,5 @@ php bin/magento admin:user:create \
 --admin-firstname="Admin" \
 --admin-lastname="Admin"
 ```
+
+?> If admin user with same email already exists then user will be updated

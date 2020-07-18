@@ -35,7 +35,7 @@ sudo service nginx restart;
 sudo service php7.3-fpm restart # if required
 ```
 > Auth start server after reboot
-```sh
+```bash
 sudo systemctl enable apapche2;
 sudo systemctl enable php7.3-fpm;
 sudo systemctl enable nginx;

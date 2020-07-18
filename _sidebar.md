@@ -3,6 +3,8 @@
 - Magento
     - [Setup & Installation](/magento)
     - [Snippet](/magento/snippet)
+    - [GraphQL](/magento/graphql)
+    - [Elasticsearch 6.x](/magento/elasticsearch)
     - [Helper](/magento/helper)
 - Laravel
 - Javascript
