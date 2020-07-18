@@ -1,3 +1,5 @@
+## welcome
+> Welcome *playmagento.com*
 ## Install server
 
 > Install Nignx/Apache, PHP, Mysql & other utilities

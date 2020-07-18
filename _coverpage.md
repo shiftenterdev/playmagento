@@ -11,6 +11,6 @@
 - Also help Laravel developers
 
 [GitHub](https://github.com/bappa2du/playmagento/)
-[Get Started](#Install server)
+[Get Started](#welcome)
 
 ![color](#f0f0f0)
