@@ -56,3 +56,28 @@ sudo service apache2 restart;
 sudo service nginx restart;
 sudo service php7.3-fpm restart # if required
 ```
+
+## Magento composer token
+> Set global magento2 token for composer
+```sh
+sudo chown -R ubuntu ~/.composer
+composer.phar global config http-basic.repo.magento.com <public_key> <private_key>
+# Example
+composer global config http-basic.repo.magento.com f92d6b866405d0799d86b41ffe00e342 378bc0e72c91dcaa404266bdf87ee961
+```
+
+## Download Magento
+> Download magento project from git using composer
+```sh
+cd /var/www/website.com
+composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.3.5-p1 .
+```
+
+## Project permission
+> Give Project file specific Permission
+```sh
+find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +;
+find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +;
+chown -R :www-data .;
+chmod u+x bin/magento;
+```
