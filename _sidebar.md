@@ -1,3 +1,7 @@
-- Sidebar
+- Getting Started
   - [Home](/)
-  - [Another page](another.md)
+- Magento
+    - [Setup & Installation](/magento)
+- Laravel
+- Javascript
+  
