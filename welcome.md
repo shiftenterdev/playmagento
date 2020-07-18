@@ -24,3 +24,20 @@ $ sudo update-alternatives --set php /usr/bin/php7.3
 ```sh
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer;
 ```
+
+## Server restart
+> Restart server
+```sh
+# for apache
+sudo service apache2 restart;
+# for nginx
+sudo service nginx restart;
+sudo service php7.3-fpm restart # if required
+```
+> Auth start server after reboot
+```sh
+sudo systemctl enable apapche2;
+sudo systemctl enable php7.3-fpm;
+sudo systemctl enable nginx;
+sudo systemctl enable mysql;
+```

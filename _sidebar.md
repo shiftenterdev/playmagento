@@ -4,4 +4,6 @@
     - [Setup & Installation](/magento)
 - Laravel
 - Javascript
+- Linux
+    - [Management](/linux)
   
