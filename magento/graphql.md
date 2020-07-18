@@ -64,6 +64,7 @@
 
 ?> First create `registration.php` and `etc/module.xml` file.
 ?> Now create `db_schema.xml` file in `etc` directory. 
+
 !> This schema is for your reference.
 ```xml
 <?xml version="1.0"?>
@@ -106,7 +107,7 @@ type branditems @doc(description: "text"){
     image: String @doc(description: "image")
 }
 ```
-4. Now we need to create those resolver class referenced in the graphql schema.
+?> Now we need to create those resolver class referenced in the graphql schema.
 ```php
 <?php
 declare(strict_types=1);
