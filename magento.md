@@ -42,3 +42,17 @@ server {
 	ErrorLog /var/www/website.com/error.log
 </VirtualHost>
 ```
+> Location
+```sh
+/etc/apache2/sites-enabled/
+```
+
+## Restart server
+> Restart server
+```sh
+# for apache
+sudo service apache2 restart;
+# for nginx
+sudo service nginx restart;
+sudo service php7.3-fpm restart # if required
+```
