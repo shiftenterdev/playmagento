@@ -1,4 +1,4 @@
-## welcome
+## Welcome
 > Welcome *playmagento.com*
 ## Install server
 
@@ -40,4 +40,20 @@ sudo systemctl enable apapche2;
 sudo systemctl enable php7.3-fpm;
 sudo systemctl enable nginx;
 sudo systemctl enable mysql;
+```
+
+## Valet(Mac OS)
+> Valet for MacOS development platform
+```sh
+brew install php
+composer global require laravel/valet
+echo 'export PATH="/Users/user/.composer/vendor/bin:$PATH"' >> ~/.bashrc
+valet start
+brew install mysql@5.7
+brew services start mysql@5.7
+valet use php@7.2
+# secure site
+valet secure laravel
+# unsecure site
+valet unsecure laravel
 ```

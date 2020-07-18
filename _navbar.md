@@ -3,8 +3,6 @@
 
 <!-- _navbar.md -->
 
-* Getting started
-
-  * [Homepage](readme.md)
+* [Getting started](welcome.md)
 
 * Configuration

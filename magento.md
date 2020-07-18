@@ -126,3 +126,19 @@ $ php bin/magento deploy:mode:set production --skip-compilation
 $ php bin/magento setup:static-content:deploy sv_SE -a frontend
 $ php bin/magento setup:static-content:deploy en_US -a adminhtml
 ```
+
+## Magento profiler
+> Magento profiler
+```sh
+$_SERVER['MAGE_PROFILER'] = 'html';
+# at beginning of index.php page
+```
+
+## Cron list
+> Get magento cron job list
+```sh
+$ wget https://files.magerun.net/n98-magerun2.phar
+$ chmod +x ./n98-magerun2.phar; 
+$ ./n98-magerun2.phar --version
+$ ./n98-magerun2.phar sys:cron:list
+```

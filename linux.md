@@ -71,3 +71,10 @@ fastcgi_buffer_size 32k;
 
 $ sudo service nginx reload/restart
 ```
+
+## Composer issue
+> Composer issues during installation
+```sh
+composer install --ignore-platform-reqs
+php -d memory_limit=-1 /usr/local/bin/composer install
+```
