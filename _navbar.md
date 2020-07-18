@@ -3,6 +3,7 @@
 
 <!-- _navbar.md -->
 
-* [Getting started](welcome.md)
+* [Let's go](welcome.md)
+* [About Me](me.md)
 
 <!-- * Configuration -->
