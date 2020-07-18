@@ -5,8 +5,10 @@
     - [Snippet](/magento/snippet)
     - [GraphQL](/magento/graphql)
     - [Elasticsearch 6.x](/magento/elasticsearch)
+    - [Varnish](/magento/varnish)
     - [Helper](/magento/helper)
 - Laravel
+    - [Helper](/laravel/helper)
 - Javascript
 - Linux
     - [Management](/linux)
