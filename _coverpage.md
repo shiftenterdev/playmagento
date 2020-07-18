@@ -8,9 +8,9 @@
 
 - Simple and straight-forword
 - All snipets and structure
-- All help Laravel developers
+- Also help Laravel developers
 
-[GitHub](https://github.com/docsifyjs/docsify/)
-[Get Started](#docsify)
+[GitHub](https://github.com/bappa2du/playmagento/)
+[Get Started](#Install server)
 
 ![color](#f0f0f0)

@@ -1,5 +1,5 @@
 - Getting Started
-    - [Server & Installation](/)
+    - [Server & Installation](/welcome)
 - Magento
     - [Setup & Installation](/magento)
 - Laravel
