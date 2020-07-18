@@ -40,6 +40,16 @@ server {
 
 }
 ```
+
+## Nginx redirect
+> Redirect page using nginx config
+```sh
+server {
+    server_name webpage.com;
+    return 301 $scheme://www.webpage.com$request_uri;
+}
+```
+
 ## Swap memory
 > Swap memory for Ubuntu
 ```sh
@@ -74,7 +84,23 @@ $ sudo service nginx reload/restart
 
 ## Composer issue
 > Composer issues during installation
-```sh
+```bash
 composer install --ignore-platform-reqs
 php -d memory_limit=-1 /usr/local/bin/composer install
 ```
+
+## SSH Tunneling
+> When we need to connect a server using a middle server
+```bash
+$ ssh -L 8090:B_IP:22 A 
+$ ssh B@127.0.0.1 -p 8090 -i ~/.ssh/B_key.pem
+```
+
+?> here `B_IP` is final destination IP, `A` is intermediate/middle server which config setup on ~/.ssh/config as 
+```text
+Host A
+	Hostname A_IP
+	User ubuntu
+	IdentityFile ~/.ssh/A_key.pem
+```
+?> finally we connect to B_IP via A_IP

@@ -2,8 +2,12 @@
     - [Server](/welcome)
 - Magento
     - [Setup & Installation](/magento)
+    - [Snippet](/magento/snippet)
+    - [Helper](/magento/helper)
 - Laravel
 - Javascript
 - Linux
     - [Management](/linux)
+- Misc
+    - [Issues](/issues)
   
