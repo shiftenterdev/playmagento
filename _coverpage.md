@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](/_media/logo.svg ':size=10%')
+![logo](/_media/logo.svg ':size=20%')
 
 # playmagento <small>1.0</small>
 
