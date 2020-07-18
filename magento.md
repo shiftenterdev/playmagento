@@ -49,7 +49,7 @@ server {
 
 ## Restart server
 > Restart server
-```sh
+```bash
 # for apache
 sudo service apache2 restart;
 # for nginx
@@ -59,7 +59,7 @@ sudo service php7.3-fpm restart # if required
 
 ## Magento composer token
 > Set global magento2 token for composer
-```sh
+```bash
 sudo chown -R ubuntu ~/.composer
 composer.phar global config http-basic.repo.magento.com <public_key> <private_key>
 # Example
@@ -68,7 +68,7 @@ composer global config http-basic.repo.magento.com f92d6b866405d0799d86b41ffe00e
 
 ## Download Magento
 > Download magento project from git using composer
-```sh
+```bash
 cd /var/www/website.com
 composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.3.5-p1 .
 ```

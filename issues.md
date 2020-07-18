@@ -1,6 +1,6 @@
 ## Mysql MacOS
 > Sometime it says yout mysql blow away. Edit file `/etc/my.cnf`
-```sh
+```bash
 # Default Homebrew MySQL server config
 [mysqld]
 # Only allow connections from localhost

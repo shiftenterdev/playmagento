@@ -1,6 +1,6 @@
 ## Installation
 > For proper installation please follow the following steps for Elasticsearch installation.
-```sh
+```bash
 $ sudo apt-get install default-jre
 $ java -version
 $ wget -qO – https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add –
