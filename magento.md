@@ -107,3 +107,22 @@ $ bin/magento setup:install --base-url=http://magento.test \
 --timezone=America/Chicago \
 --use-rewrites=1
 ```
+
+## Sample Data
+> Magento get Sample Data
+```sh
+$ wget https://github.com/magento/magento2-sample-data/archive/2.3.5.zip -O sampledata.zip
+$ unzip sampledata.zip
+$ php -f <sample-data_clone_dir>/dev/tools/build-sample-data.php -- --ce-source="<path_to_your_magento_instance>"
+# example
+$ php -f magento2-sample-data-2.3.5/dev/tools/build-sample-data.php -- --ce-source="."
+$ sudo chmod -R 777 magento2-sample-data-2.3.5/pub
+```
+
+## Deploy Project
+> Deploy Magento 2 project
+```sh
+$ php bin/magento deploy:mode:set production --skip-compilation
+$ php bin/magento setup:static-content:deploy sv_SE -a frontend
+$ php bin/magento setup:static-content:deploy en_US -a adminhtml
+```
