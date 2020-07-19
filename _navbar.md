@@ -3,7 +3,7 @@
 
 <!-- _navbar.md -->
 
-* [⏳Let's go](welcome.md)
+* [⏱Let's go](welcome.md)
 * [👨‍💻About Me](me.md)
 
 <!-- * Configuration -->
