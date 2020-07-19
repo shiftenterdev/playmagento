@@ -19,6 +19,9 @@
     +-- mview.xml
     +-- email_templates.xml
     +-- indexer.xml
+    +-- eav_attributes.xml
+    +-- webapi.xml
+    +-- widget.xml
     +-- adminhtml
         +-- menu.xml
         +-- routes.xml
@@ -29,6 +32,12 @@
         +-- routes.xml
         +-- di.xml
         +-- events.xml
+        +-- page_types.xml
+        +-- sections.xml
+    +-- webapi_soap
+        +-- di.xml
+    +-- webapi_rest
+        +-- di.xml
 +-- Block
     + Adminhtml
 +-- Controller
@@ -41,9 +50,13 @@
     +-- Data
 +-- Console
     +-- Command
++-- Cron
 +-- Setup
+    +-- Patch
 +-- Test
 +-- i18n
+    +-- en_US.csv
+    +-- sv_SE.csv
 +-- Plugin
 +-- Observer
 +-- ViewModel
