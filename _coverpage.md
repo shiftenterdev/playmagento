@@ -2,9 +2,9 @@
 
 ![logo](/_media/logo.svg ':size=20%')
 
-# playmagento <small>1.0</small>
+# 🎆 playmagento <small>1.0</small>
 
-> A magical documentation for Magento devops.
+> A magical :collision: documentation for Magento devops. 💯
 
 - Simple and straight-forword
 - All snipets and structure
