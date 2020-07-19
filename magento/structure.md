@@ -238,15 +238,6 @@ ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Magento_Customer', __D
         <index referenceId="CUSTOMER_ENTITY_STORE_ID" indexType="btree">
             <column name="store_id"/>
         </index>
-        <index referenceId="CUSTOMER_ENTITY_WEBSITE_ID" indexType="btree">
-            <column name="website_id"/>
-        </index>
-        <index referenceId="CUSTOMER_ENTITY_FIRSTNAME" indexType="btree">
-            <column name="firstname"/>
-        </index>
-        <index referenceId="CUSTOMER_ENTITY_LASTNAME" indexType="btree">
-            <column name="lastname"/>
-        </index>
     </table>
 </schema>
 ```
