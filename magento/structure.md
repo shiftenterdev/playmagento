@@ -85,7 +85,7 @@
 
 !> Reference magento customer module
 
-## registratopn.php
+### registratopn.php
 
 ```php
 <?php
@@ -97,7 +97,7 @@ ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Magento_Customer', __D
 
 ```
 
-## etc/module.xml
+### etc/module.xml
 
 ```xml
 <?xml version="1.0"?>
@@ -113,7 +113,7 @@ ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Magento_Customer', __D
 
 ```
 
-## etc/acl.xml
+### etc/acl.xml
 ```xml
 <?xml version="1.0"?>
 
@@ -146,7 +146,7 @@ ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Magento_Customer', __D
 
 ```
 
-## etc/config.xml
+### etc/config.xml
 ```xml
 <?xml version="1.0"?>
 <!--
@@ -176,38 +176,6 @@ ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Magento_Customer', __D
             <default>
                 <group>1</group>
             </default>
-            <account_information>
-                <change_email_template>customer_account_information_change_email_template</change_email_template>
-                <change_email_and_password_template>customer_account_information_change_email_and_password_template</change_email_and_password_template>
-            </account_information>
-            <password>
-                <forgot_email_identity>support</forgot_email_identity>
-                <forgot_email_template>customer_password_forgot_email_template</forgot_email_template>
-                <remind_email_template>customer_password_remind_email_template</remind_email_template>
-                <reset_link_expiration_period>2</reset_link_expiration_period>
-                <reset_password_template>customer_password_reset_password_template</reset_password_template>
-                <required_character_classes_number>3</required_character_classes_number>
-                <minimum_password_length>8</minimum_password_length>
-                <lockout_failures>10</lockout_failures>
-                <lockout_threshold>10</lockout_threshold>
-                <autocomplete_on_storefront>0</autocomplete_on_storefront>
-            </password>
-            <address>
-                <street_lines>2</street_lines>
-                <prefix_show />
-                <prefix_options />
-                <middlename_show />
-                <suffix_show />
-                <suffix_options />
-                <dob_show />
-                <gender_show />
-                <telephone_show>req</telephone_show>
-                <company_show>opt</company_show>
-                <fax_show/>
-            </address>
-            <startup>
-                <redirect_dashboard>0</redirect_dashboard>
-            </startup>
             <online_customers>
                 <section_data_lifetime>60</section_data_lifetime>
             </online_customers>
@@ -217,7 +185,7 @@ ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Magento_Customer', __D
 
 ```
 
-## etc/db_schema.xml
+### etc/db_schema.xml
 ```xml
 <?xml version="1.0"?>
 <!--
@@ -239,36 +207,20 @@ ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Magento_Customer', __D
         <column xsi:type="varchar" name="increment_id" nullable="true" length="50" comment="Increment ID"/>
         <column xsi:type="smallint" name="store_id" padding="5" unsigned="true" nullable="true" identity="false"
                 default="0" comment="Store ID"/>
-        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP"
-                comment="Created At"/>
         <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="false" default="CURRENT_TIMESTAMP"
                 comment="Updated At"/>
         <column xsi:type="smallint" name="is_active" padding="5" unsigned="true" nullable="false" identity="false"
                 default="1" comment="Is Active"/>
         <column xsi:type="smallint" name="disable_auto_group_change" padding="5" unsigned="true" nullable="false"
                 identity="false" default="0" comment="Disable automatic group change based on VAT ID"/>
-        <column xsi:type="varchar" name="created_in" nullable="true" length="255" comment="Created From"/>
-        <column xsi:type="varchar" name="prefix" nullable="true" length="40" comment="Name Prefix"/>
-        <column xsi:type="varchar" name="firstname" nullable="true" length="255" comment="First Name"/>
-        <column xsi:type="varchar" name="middlename" nullable="true" length="255" comment="Middle Name/Initial"/>
-        <column xsi:type="varchar" name="lastname" nullable="true" length="255" comment="Last Name"/>
-        <column xsi:type="varchar" name="suffix" nullable="true" length="40" comment="Name Suffix"/>
         <column xsi:type="date" name="dob" comment="Date of Birth"/>
         <column xsi:type="varchar" name="password_hash" nullable="true" length="128" comment="Password_hash"/>
-        <column xsi:type="varchar" name="rp_token" nullable="true" length="128" comment="Reset password token"/>
         <column xsi:type="datetime" name="rp_token_created_at" on_update="false" nullable="true"
                 comment="Reset password token creation time"/>
         <column xsi:type="int" name="default_billing" padding="10" unsigned="true" nullable="true" identity="false"
                 comment="Default Billing Address"/>
-        <column xsi:type="int" name="default_shipping" padding="10" unsigned="true" nullable="true" identity="false"
-                comment="Default Shipping Address"/>
-        <column xsi:type="varchar" name="taxvat" nullable="true" length="50" comment="Tax/VAT Number"/>
-        <column xsi:type="varchar" name="confirmation" nullable="true" length="64" comment="Is Confirmed"/>
         <column xsi:type="smallint" name="gender" padding="5" unsigned="true" nullable="true" identity="false"
                 comment="Gender"/>
-        <column xsi:type="smallint" name="failures_num" padding="6" unsigned="false" nullable="true" identity="false"
-                default="0" comment="Failure Number"/>
-        <column xsi:type="timestamp" name="first_failure" on_update="false" nullable="true" comment="First Failure"/>
         <column xsi:type="timestamp" name="lock_expires" on_update="false" nullable="true"
                 comment="Lock Expiration Date"/>
         <constraint xsi:type="primary" referenceId="PRIMARY">
@@ -299,7 +251,7 @@ ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Magento_Customer', __D
 </schema>
 ```
 
-## etc/adminhtml/menu.xml
+### etc/adminhtml/menu.xml
 ```xml
 <?xml version="1.0"?>
 
@@ -308,12 +260,11 @@ ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Magento_Customer', __D
         <add id="Magento_Customer::customer" title="Customers" translate="title" module="Magento_Customer" sortOrder="30" resource="Magento_Customer::customer"/>
         <add id="Magento_Customer::customer_manage" title="All Customers" translate="title" module="Magento_Customer" sortOrder="10" parent="Magento_Customer::customer" action="customer/index/" resource="Magento_Customer::manage"/>
         <add id="Magento_Customer::customer_online" title="Now Online" translate="title" module="Magento_Customer" sortOrder="30" parent="Magento_Customer::customer" action="customer/online/" resource="Magento_Customer::online"/>
-        <add id="Magento_Customer::customer_group" title="Customer Groups" translate="title" module="Magento_Customer" sortOrder="50" parent="Magento_Customer::customer" action="customer/group" resource="Magento_Customer::group"/>
     </menu>
 </config>
 ```
 
-## etc/adminhtml/routes.xml
+### etc/adminhtml/routes.xml
 ```xml
 <?xml version="1.0"?>
 
@@ -327,18 +278,18 @@ ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Magento_Customer', __D
 
 ```
 
-## Controller
+### Controller
 
-## Admin/Controller
+### Admin/Controller
 
-## Block
+### Block
 
-## Admin/Block
+### Admin/Block
 
-## Helper Data
+### Helper Data
 
-## Ui Component
+### Ui Component
 
-## Layout
+### Layout
 
-## Templates
+### Templates
