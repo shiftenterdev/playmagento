@@ -2,11 +2,14 @@
     - [Server](/welcome)
 - Magento
     - [Setup & Installation](/magento)
+    - [Management](/magento/management)
     - [Snippet](/magento/snippet)
     - [GraphQL](/magento/graphql)
     - [Elasticsearch 6.x](/magento/elasticsearch)
     - [Varnish](/magento/varnish)
     - [Helper](/magento/helper)
+- PHP
+    - [Helper](/php/helper)
 - Laravel
     - [Helper](/laravel/helper)
 - Javascript

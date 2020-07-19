@@ -62,3 +62,14 @@ fetch('/business', postData('/business',{name:name,age:age}))
             console.log(r);
         })
 ```
+
+## Helper function
+> Check file extension
+```javascript
+var fExt = $(this).val().split('.').pop().toLowerCase();
+if($.inArray(fExt, ['jpg','jpeg']) == -1) {
+    alert('invalid extension!');
+    return false;
+}
+```
+
