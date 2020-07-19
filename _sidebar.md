@@ -10,6 +10,7 @@
 - Laravel
     - [Helper](/laravel/helper)
 - Javascript
+    - [Basic](/javascript)
 - Linux
     - [Management](/linux)
 - Misc
