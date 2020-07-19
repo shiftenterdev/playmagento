@@ -1,5 +1,7 @@
-## Welcome
-> Welcome *playmagento.com*
+## Welcome `v1.0`
+?> Welcome **playmagento.com** `v1.0` :laptop:
+
+!> This documentation is still on development.
 ## Install server
 
 > Install Nignx/Apache, PHP, Mysql & other utilities
