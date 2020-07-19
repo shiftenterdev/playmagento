@@ -1,5 +1,5 @@
 - Getting Started
-    - [Server](/welcome)
+    - [Dev Environment](/welcome)
 - Magento
     - [Setup & Installation](/magento)
     - [Management](/magento/management)
