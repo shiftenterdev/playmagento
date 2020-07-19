@@ -1,5 +1,6 @@
-## Registration
+!> Coming soon
 
+## Registration
 
 ## Module
 
