@@ -8,6 +8,8 @@
 
 ```
 
+!> Reference magento customer module
+
 ## registratopn.php
 
 ```php
@@ -220,6 +222,34 @@ ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Magento_Customer', __D
         </index>
     </table>
 </schema>
+```
+
+## etc/adminhtml/menu.xml
+```xml
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Magento_Customer::customer" title="Customers" translate="title" module="Magento_Customer" sortOrder="30" resource="Magento_Customer::customer"/>
+        <add id="Magento_Customer::customer_manage" title="All Customers" translate="title" module="Magento_Customer" sortOrder="10" parent="Magento_Customer::customer" action="customer/index/" resource="Magento_Customer::manage"/>
+        <add id="Magento_Customer::customer_online" title="Now Online" translate="title" module="Magento_Customer" sortOrder="30" parent="Magento_Customer::customer" action="customer/online/" resource="Magento_Customer::online"/>
+        <add id="Magento_Customer::customer_group" title="Customer Groups" translate="title" module="Magento_Customer" sortOrder="50" parent="Magento_Customer::customer" action="customer/group" resource="Magento_Customer::group"/>
+    </menu>
+</config>
+```
+
+## etc/adminhtml/routes.xml
+```xml
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <route id="customer" frontName="customer">
+            <module name="Magento_Customer" />
+        </route>
+    </router>
+</config>
+
 ```
 
 ## Controller
