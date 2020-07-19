@@ -7,6 +7,7 @@
     - [GraphQL](/magento/graphql)
     - [Elasticsearch 6.x](/magento/elasticsearch)
     - [Varnish](/magento/varnish)
+    - [Redis](/magento/redis)
     - [Helper](/magento/helper)
 - PHP
     - [Helper](/php/helper)
