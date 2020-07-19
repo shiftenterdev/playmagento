@@ -4,7 +4,7 @@
 
 # 🧑‍💻 playmagento <small>1.0</small>
 
-> A magical :collision: documentation for Magento devops. 💯
+> A magical ⚡ documentation for Magento devops. 🎈
 
 - Simple and straight-forword
 - All snipets and structure
