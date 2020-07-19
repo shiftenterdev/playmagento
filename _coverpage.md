@@ -11,6 +11,6 @@
 - Also help Laravel developers
 
 [GitHub](https://github.com/bappa2du/playmagento/)
-[Get Started](#welcome)
+[Get Started](welcome.md)
 
 ![color](#ffffff)
