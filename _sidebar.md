@@ -3,7 +3,7 @@
 - Magento
     - [Setup & Installation](/magento)
     - [Management](/magento/management)
-    - [Snippet](/magento/snippet)
+    - [Structure](/magento/structure)
     - [GraphQL](/magento/graphql)
     - [Elasticsearch 6.x](/magento/elasticsearch)
     - [Varnish](/magento/varnish)
