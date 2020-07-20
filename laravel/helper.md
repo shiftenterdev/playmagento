@@ -16,3 +16,17 @@
 6. Image Manage & Upload `intervention/image`
 7. Excel & Spreadsheet `maatwebsite/excel`
 8. Role Permission `spatie/laravel-permission`
+
+## Slack for Log
+> You can add all of your project log to a specific slack channel through `channel webhook`
+
+?> Go to your project `.env` file and add the following settings as
+```text
+LOG_CHANNEL=stack
+LOG_SLACK_WEBHOOK_URL=`https://hooks.slack.com/services/TRR3YMWL2/BTFJ8G4RG/xxxxxxkxkxxkxkxxxxx
+```
+> Where `LOG_SLACK_WEBHOOK_URL` is the webhook key for the channel. 
+
+> For slack workspace search for an Apps as `Incoming Webhooks`. When adding the apps just specify your desire channel. Finally you will get a webhook url.
+
+!> For getting all the logs type like `info`,`debug`,`error` through webhook, go to `config/logging.php` and in `channels` section for `slack` set level `info` instead `debug`.

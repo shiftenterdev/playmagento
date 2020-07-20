@@ -105,6 +105,72 @@ Host A
 ```
 ?> finally we connect to B_IP via A_IP
 
+## Server git webhook
+> Set up `git` and `server` webhook as below
+```bash
+$ sudo apt install webhook supervisor -y
+$ sudo systemctl stop webhook
+$ whoami
+# {username}
+$ mkdir ~/webhooks
+$ mkdir ~/webhooks/deployment
+$ touch ~/webhooks/hooks.json
+$ touch ~/webhooks/deployment/deploy.sh
+$ chmod +x ~/webhooks/deployment/deploy.sh
+$ vi ~/webhooks/deployment/deploy.sh
+```
+
+?> Edit file with your required commands
+
+```bash
+#!/bin/bash
+
+git pull origin master
+# composer dumpautoload
+# php artisan c:c
+# php bin/magento c:f
+# rm -rf generated/*
+```
+
+> Then edit `$ vi ~/webhooks/hooks.json`
+
+```bash
+[
+  {
+    "id": "website-webhook",
+    "execute-command": "/home/ubuntu/webhooks/deployment/deploy.sh",
+    "command-working-directory": "/home/ubuntu/example.com",
+    "response-message": "Executing deploy script..."
+  }
+]
+```
+> Finally edit `supervisor` as `sudo vi /etc/supervisor/conf.d/webhook.conf`
+```bash
+[program:webhooks]
+command=bash -c "/usr/bin/webhook -hooks /home/ubuntu/webhooks/hooks.json -verbose"
+redirect_stderr=true
+autostart=true
+autorestart=true
+user=ubuntu
+numprocs=1
+process_name=%(program_name)s_%(process_num)s
+stdout_logfile=/home/ubuntu/webhooks/supervisor.log
+environment=HOME="/home/ubuntu",USER="ubuntu"
+```
+
+> Now enable and restart supervisor
+```bash
+$ sudo systemctl enable supervisor
+$ sudo systemctl restart supervisor
+```
+
+> Now you can add webhook to you `github`,`gitlab` or `bitbucket` repo
+```bash
+http://id:9000/hooks/{hook_id}
+# Example
+http://111.222.178.598:9000/hooks/website-webhook
+```
+
 ## Centos 7 Setup
 > Centos complete setup
 ```bash
