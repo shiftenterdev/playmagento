@@ -27,13 +27,13 @@
 │   │   ├── routes.xml
 │   │   ├── system.xml
 │   │   ├── di.xml
-│   │   ├── events.xml
+│   │   └── events.xml
 │   ├── frontend
 │   │   ├── routes.xml
 │   │   ├── di.xml
 │   │   ├── events.xml
 │   │   ├── page_types.xml
-│   │   ├── sections.xml
+│   │   └── sections.xml
 │   ├── webapi_soap
 │   │   └── di.xml
 │   └── webapi_rest
@@ -43,7 +43,7 @@
 ├── Controller
 │   └── Adminhtml
 ├── Helper
-│   ├── Data.php
+│   └── Data.php
 ├── CustomerData
 ├── Ui
 ├── Api
