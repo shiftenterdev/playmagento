@@ -88,7 +88,7 @@ sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_passwo
 mysql -uroot -p -e "CREATE DATABASE project_database";
 ```
 
-## Install Magento
+## Install Magento 2.3.x
 > Install Magento Project via cli
 ```bash
 $ bin/magento setup:install --base-url=http://magento.test \
@@ -107,6 +107,34 @@ $ bin/magento setup:install --base-url=http://magento.test \
 --timezone=America/Chicago \
 --use-rewrites=1
 ```
+
+## Install Magento 2.4.x
+> Install Magento Project via cli
+```bash
+$ bin/magento setup:install --base-url=http://magento240.test \
+--db-host=127.0.0.1 \
+--db-name=database \
+--db-user=root \
+--db-password=root \
+--admin-firstname=System \
+--admin-lastname=Admin \
+--admin-email=user@example.com \
+--admin-user=admin \
+--admin-password=admin \
+--backend-frontname=admin \
+--language=en_US \
+--currency=USD \
+--timezone=America/Chicago \
+--search-engine=elasticsearch7 \
+--elasticsearch-host=127.0.0.1 \
+--elasticsearch-port=9200 \
+--elasticsearch-index-prefix=magento2 \
+--elasticsearch-timeout=15 \
+--elasticsearch-enable-auth=false \
+--use-rewrites=1
+```
+
+?> Other options are `--elasticsearch-username`,`--elasticsearch-password`
 
 ## Sample Data
 > Magento get Sample Data
