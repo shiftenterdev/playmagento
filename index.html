@@ -1,92 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Playmagento - A magical documentation for Magento devops.</title>
-  <link rel="icon" type="image/png" href="_media/favicon.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="title" content="Playmagento - A magical documentation for Magento devops.">
-  <meta name="description" content="Playmagento - A magical documentation for Magento devops.">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
-  <style>
-    nav.app-nav li ul {
-      min-width: 100px;
-    }
-  </style>
-</head>
-<body>
-  <div id="app">Loading ...</div>
-  <script>
-    window.$docsify = {
-      homepage: 'welcome.md',
-      coverpage: true,
-      executeScript: true,
-      // autoHeader: true,
-      // executeScript: true,
-      // onlyCover: true,
-      loadSidebar: true,
-      notFoundPage: true,
-      // routerMode: 'history',
-      loadNavbar: true,
-      mergeNavbar: true,
-      maxLevel: 4,
-      themeColor: '#5a3ed8',
-      subMaxLevel: 2,
-      // logo: '/_media/laptop.png',
-      name: '🎉 Playmagento',
-      search: {
-        noData: {
-          '/sv/': 'Keine Ergebnisse!',
-          '/': 'No results!'
-        },
-        paths: 'auto',
-        placeholder: {
-          '/sv/': 'Sok',
-          '/': 'Search'
-        }
-      },
-      copyCode: {
-        buttonText : 'Copy',
-        errorText  : 'Error',
-        successText: 'Copied'
-      },
-      disqus: 'playmagento-com',
-      auto2top: true,
-      repo: 'bappa2du/playmagento',
-      plugins: [
-        function (hook, vm) {
-          hook.beforeEach(function (html) {
-            if (/githubusercontent\.com/.test(vm.route.file)) {
-              url = vm.route.file
-                .replace('raw.githubusercontent.com', 'github.com')
-                .replace(/\/master/, '/blob/master')
-            } else if (/jsdelivr\.net/.test(vm.route.file)) {
-              url = vm.route.file
-                .replace('cdn.jsdelivr.net/gh', 'github.com')
-                .replace('@master', '/blob/master')
-            } else {
-              url = 'https://github.com/bappa2du/playmagento/blob/master/' + vm.route.file
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Laravel</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 200;
+                height: 100vh;
+                margin: 0;
             }
-            var editHtml = '[:memo: Edit Document](' + url + ')\n'
-            return editHtml
-              + html
-              + '\n\n----\n'
-              + '<a href="https://playmagento.com" target="_self" style="color: inherit; font-weight: normal; text-decoration: none;">Collected with love</a>'
-          })
-        }
-      ]
-    }
-  </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-markdown.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-nginx.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-php.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-  <!-- <script src="//unpkg.com/docsify-edit-on-github/index.js"></script> -->
-  <script src="https://unpkg.com/docsify-copy-code"></script>
-</body>
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
+
+            .content {
+                text-align: center;
+            }
+
+            .title {
+                font-size: 84px;
+            }
+
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+        
+
+            <div class="content">
+                <div class="title m-b-md">
+                    Playmagento for sale
+                </div>
+                <small>bappa2du@gmail.com</small>
+
+            </div>
+        </div>
+    </body>
 </html>
