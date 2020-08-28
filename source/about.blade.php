@@ -16,4 +16,8 @@ description: A little bit about the site
     <p class="mb-6">A magento developer</p>
 
     <p class="mb-6">But life started with laravel & now love with Livewire</p>
+
+    <p class="mb-8">
+	    Reach me at <a href="mailto:info@shiftenter.dev">@{!! $my_inbox !!}</a>
+	</p>
 @endsection
