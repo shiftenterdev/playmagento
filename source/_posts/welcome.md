@@ -19,3 +19,4 @@ Ready to work in Magento echo-system lets roll together and something more beaut
 - Magento installation
 - Basic customization
 - Advance customization
+- Magento debugging
