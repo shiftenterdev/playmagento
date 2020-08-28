@@ -3,7 +3,7 @@ extends: _layouts.post
 section: content
 title: Setup for your environment(LAMP/LEMP)
 date: 2020-01-28
-description: Setup for your environment(LAMP/LEMP)
+description: Setup nginx,apache,mysql,git, switch php, composer, server restart, valet
 categories: [setup]
 featured: true
 excerpt: Before starting any cms or framework we need to setupup our working environment. Thats why..
