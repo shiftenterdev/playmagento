@@ -2,7 +2,7 @@
 extends: _layouts.post
 section: content
 title: Setup for your environment(LAMP/LEMP)
-date: 2020-08-28
+date: 2020-01-28
 description: Setup for your environment(LAMP/LEMP)
 categories: [setup]
 featured: true

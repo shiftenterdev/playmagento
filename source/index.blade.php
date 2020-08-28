@@ -1,3 +1,8 @@
+---
+title: Let's make a large scale and optimize ecommerce site together with magento
+description: Let's ready and roll.
+---
+
 @extends('_layouts.master')
 
 @section('body')
