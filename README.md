@@ -1,4 +1,0 @@
-## Playmagento
-
-> https://playmagento.com
-
