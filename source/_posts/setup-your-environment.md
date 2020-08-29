@@ -1,7 +1,7 @@
 ---
 extends: _layouts.post
 section: content
-title: Setup for your environment(LAMP/LEMP)
+title: Setup your environment(LAMP/LEMP)
 date: 2020-01-28
 description: Setup nginx,apache,mysql,git, switch php, composer, server restart, valet
 categories: [setup]

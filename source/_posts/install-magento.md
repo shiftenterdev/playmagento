@@ -2,8 +2,8 @@
 extends: _layouts.post
 section: content
 title: Install magento
-date: 2018-11-21
-categories: [apache,configuration]
+date: 2019-08-01
+categories: [magento]
 description: Install magento
 ---
 
@@ -29,7 +29,7 @@ mysql -uroot -p -e "CREATE DATABASE project_database";
 
 Now we are fully ready for installation
 
-### Magento 2.0.* - 2.3.5-p2
+### Magento 2.0.0 - 2.3.5-p2
 
 ```sh
 $ php bin/magento setup:install --base-url=http://magento.test \
@@ -75,4 +75,4 @@ $ php bin/magento setup:install --base-url=http://magento240.test \
 --use-rewrites=1
 ```
 
-**Other option for 2.4.0 is `--elasticsearch-username`,`--elasticsearch-password`. Since Elastic search is now required for magento form version 2.4.0**
+**Other option for 2.4.0 is `--elasticsearch-username`,`--elasticsearch-password`. Since Elasticsearch is now required for magento form version 2.4.0**
