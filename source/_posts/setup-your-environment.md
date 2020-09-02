@@ -61,7 +61,7 @@ sudo systemctl enable nginx;
 sudo systemctl enable mysql;
 ```
 ---
-### Install Valet(Optional)
+### Install Valet for Mac OS (Optional)
 > If you are a Mac user then Valet might be a good option for you
 ```sh
 brew install php
@@ -75,4 +75,34 @@ valet use php@7.2
 valet secure laravel
 # unsecure site
 valet unsecure laravel
+```
+---
+### Install Valet for Ubuntu (Optional)
+If you are a Ubuntu user then you can also install valet which is easy to manage
+
+```sh
+# Requirement
+sudo apt-get install network-manager libnss3-tools jq xsel
+# Installation
+composer global require cpriego/valet-linux
+echo 'export PATH="/home/{user}/.composer/vendor/bin:$PATH"' >> ~/.bashrc
+# If you are using zshell
+echo 'export PATH="/home/{user}/.composer/vendor/bin:$PATH"' >> ~/.zshrc
+valet install
+valet start
+# secure site
+valet secure magento
+# unsecure site
+valet unsecure magento
+```
+> If you face issue nginx 502 error. then 
+```sh
+sudo vi /etc/nginx/nginx.conf
+# in http node add
+fastcgi_buffers 16 16k; 
+fastcgi_buffer_size 32k;
+```
+Finally restart the valet server
+```zsh
+valet restart
 ```
